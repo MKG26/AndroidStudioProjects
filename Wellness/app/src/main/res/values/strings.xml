@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Wellness</string>
+    <string name="name1">Spend 15 minutes outdoors</string>
+    <string name="name2">Listen to a new podcast or audiobook</string>
+    <string name="name3">Gym 6 days a week</string>
+
+    <string name="description1">Spending time outdoors can improve overall health and wellness. The outdoors offers many opportunities to be physically active. Time outdoors may also promote mental health and stress reduction.</string>
+    <string name="description2">Podcasts are wide open. They can actually be used to share a book but they are more commonly mixed programming. They can be an interview or dialogue show like I have, a solo work, or even an audio drama like old time radio.</string>
+    <string name="description3">Many people choose to go to the gym in order to improve their physical fitness. However, there are other benefits of regular trips to the gym that are often overlooked. For example, going to the gym can help to improve your mental health.</string>
+
+</resources>

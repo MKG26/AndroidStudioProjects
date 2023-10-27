@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Grid Building</string>
+    <string name="grid1">Architecture</string>
+    <string name="grid2">Crafts</string>
+    <string name="grid3">Business</string>
+    <string name="grid4">Culinary</string>
+    <string name="grid5">Design</string>
+    <string name="grid6">Fashion</string>
+    <string name="grid7">Film</string>
+    <string name="grid8">Gaming</string>
+    <string name="grid9">Drawing</string>
+    <string name="grid10">Lifestyle</string>
+    <string name="grid11">Music</string>
+    <string name="grid12">Painting</string>
+    <string name="grid13">Photography</string>
+    <string name="grid14">Tech</string>
+
+    <string name="number1">58</string>
+    <string name="number2">121</string>
+    <string name="number3">78</string>
+    <string name="number4">118</string>
+    <string name="number5">458</string>
+    <string name="number6">38</string>
+    <string name="number7">88</string>
+    <string name="number8">78</string>
+    <string name="number9">54</string>
+    <string name="number10">67</string>
+    <string name="number11">82</string>
+    <string name="number12">999</string>
+    <string name="number13">42</string>
+    <string name="number14">43</string>
+</resources>
