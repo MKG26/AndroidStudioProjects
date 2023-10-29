@@ -155,21 +155,21 @@ fun RailInfo(
     ) {
         Text(
             text = stringResource(id = head),
-            style = MaterialTheme.typography.displayMedium,
+            style = MaterialTheme.typography.displaySmall,
             modifier = modifier
                 .padding(bottom = 10.dp)
         )
 
         Text(
             text = stringResource(id = stock),
-            style = MaterialTheme.typography.bodyLarge,
+            style = MaterialTheme.typography.displayMedium,
             modifier = modifier
                 .padding(bottom = 10.dp)
         )
 
         Text(
             text = stringResource(id = side),
-            style = MaterialTheme.typography.bodyLarge,
+            style = MaterialTheme.typography.displayMedium,
             modifier = modifier
                 .padding(bottom = 10.dp)
         )
