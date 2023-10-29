@@ -26,17 +26,22 @@ val Typography = Typography(
         letterSpacing = 0.5.sp
     ),
 
-    displayLarge = TextStyle(
+    displaySmall = TextStyle(
         fontFamily = Poppins,
-        fontWeight = FontWeight.Normal,
-        fontSize = 30.sp
+        fontWeight = FontWeight.Bold,
+        fontSize = 20.sp
     ),
 
     displayMedium = TextStyle(
         fontFamily = Poppins,
-        fontWeight = FontWeight.Bold,
+        fontWeight = FontWeight.Normal,
         fontSize = 20.sp,
-        letterSpacing = 1.sp
+        letterSpacing = 0.5.sp
+    ),
+    displayLarge = TextStyle(
+        fontFamily = Poppins,
+        fontWeight = FontWeight.Normal,
+        fontSize = 30.sp
     )
     /* Other default text styles to override
     titleLarge = TextStyle(
