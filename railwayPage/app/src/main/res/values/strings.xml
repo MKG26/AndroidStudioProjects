@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">railwayPage</string>
+
+    <string name="name1">Gevra OC Mine</string>
+    <string name="name2">Dipka OC Project</string>
+    <string name="name3">Kusmunda OC Mine</string>
+
+    <string name="coal1">Tentative Coal Stock: 10 MT</string>
+    <string name="coal2">Tentative Coal Stock: 15 MT</string>
+    <string name="coal3">Tentative Coal Stock: 7 MT</string>
+
+    <string name="siding1">Nearest Siding: Korba, Chhattisgarh</string>
+    <string name="siding2">Nearest Siding: Amera Tahsil, Chhattisgarh </string>
+    <string name="siding3">Nearest Siding: Hasdeo River, Chhattisgarh</string>
+
+    <string name="request">Requested</string>
+
+</resources>
