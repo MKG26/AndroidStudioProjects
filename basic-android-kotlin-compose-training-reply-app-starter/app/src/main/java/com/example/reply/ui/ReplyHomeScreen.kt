@@ -135,6 +135,7 @@ fun ReplyHomeScreen(
         } else {
             ReplyDetailsScreen(
                 replyUiState = replyUiState,
+                isFullScreen = true,
                 onBackPressed = onDetailScreenBackPressed,
                 modifier = modifier
             )
@@ -206,6 +207,7 @@ private fun ReplyAppContent(
                         navigationItemContentList = navigationItemContentList,
                         modifier = Modifier
                             .fillMaxWidth()
+                            .testTag(bottomNavigationContentDescription)
                     )
                 }
             }
