@@ -41,7 +41,7 @@ class ReplyAppTest {
     }
 
     @Test
-    @TestExpandedWidth,m
+    @TestExpandedWidth
     fun expandedDevice_verifyUsingNavigationDrawer(){
         composeTestRule.setContent {
             ReplyApp(
