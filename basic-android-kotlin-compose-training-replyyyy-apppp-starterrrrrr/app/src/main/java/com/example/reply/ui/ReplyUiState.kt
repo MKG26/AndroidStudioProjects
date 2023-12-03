@@ -13,16 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package com.example.reply.ui
 
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
-buildscript {
-    extra.apply {
-        set("lifecycle_version", "2.6.1")
-    }
-}
+import com.example.reply.data.Email
+import com.example.reply.data.MailboxType
+import com.example.reply.data.local.LocalEmailsDataProvider
 
-plugins {
-    id("com.android.application") version "8.2.0" apply false
-    id("com.android.library") version "8.2.0" apply false
-    id("org.jetbrains.kotlin.android") version "1.8.21" apply false
+data class ReplyUiState(
+    val mailboxes: Map<MailboxType, List<Email>> = emptyMap(),
+    val currentMailbox: MailboxType = MailboxType.Inbox,
+    val currentSelectedEmail: Email = LocalEmailsDataProvider.defaultEmail,
+    val isShowingHomepage: Boolean = true
+) {
+    val currentMailboxEmails: List<Email> by lazy { mailboxes[currentMailbox]!! }
 }

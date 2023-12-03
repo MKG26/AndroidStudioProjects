@@ -13,32 +13,42 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
-package com.example.sports
+package com.example.reply
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.material3.Surface
 import androidx.compose.material3.windowsizeclass.ExperimentalMaterial3WindowSizeClassApi
+import androidx.compose.material3.windowsizeclass.WindowWidthSizeClass
 import androidx.compose.material3.windowsizeclass.calculateWindowSizeClass
-import com.example.sports.ui.SportsApp
-import com.example.sports.ui.theme.SportsTheme
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.tooling.preview.Preview
+import com.example.reply.ui.ReplyApp
+import com.example.reply.ui.theme.ReplyTheme
 
-/**
- * Activity for Sports app
- */
 class MainActivity : ComponentActivity() {
+
     @OptIn(ExperimentalMaterial3WindowSizeClassApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         setContent {
-            SportsTheme {
+            ReplyTheme {
                 Surface {
-                    SportsApp()
+                    ReplyApp()
                 }
             }
+        }
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun ReplyAppCompactPreview() {
+    ReplyTheme {
+        Surface {
+            ReplyApp()
         }
     }
 }
