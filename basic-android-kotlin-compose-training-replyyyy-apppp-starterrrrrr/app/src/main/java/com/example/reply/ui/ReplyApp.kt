@@ -22,17 +22,41 @@ import androidx.compose.ui.Modifier
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.reply.data.Email
 import com.example.reply.data.MailboxType
+import com.example.reply.utils.ReplyContentType
 
 @Composable
 fun ReplyApp(
+    windowSize: WindowWidthSizeClass,
     modifier: Modifier = Modifier,
 ) {
     val viewModel: ReplyViewModel = viewModel()
     val replyUiState = viewModel.uiState.collectAsState().value
 
+    val contentType: ReplyContentType
+
+    when(windowSize){
+
+        WindowWidthSizeClass.Compact -> {
+            contentType = ReplyContentType.LIST_ONLY
+
+        }
+        WindowWidthSizeClass.Medium -> {
+
+            contentType = ReplyContentType.LIST_ONLY
+        }
+        WindowWidthSizeClass.Expanded -> {
+
+            contentType = ReplyContentType.LIST_AND_DETAIL
+        }
+        else -> {
+
+            contentType = ReplyContentType.LIST_ONLY
+        }
+    }
 
     ReplyHomeScreen(
         replyUiState = replyUiState,
+        contentType = contentType,
         onTabPressed = { mailboxType: MailboxType ->
             viewModel.updateCurrentMailbox(mailboxType = mailboxType)
             viewModel.resetHomeScreenStates()

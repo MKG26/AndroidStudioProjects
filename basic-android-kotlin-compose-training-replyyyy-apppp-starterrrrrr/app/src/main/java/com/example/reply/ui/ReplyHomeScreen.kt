@@ -50,10 +50,12 @@ import com.example.reply.R
 import com.example.reply.data.Email
 import com.example.reply.data.MailboxType
 import com.example.reply.data.local.LocalAccountsDataProvider
+import com.example.reply.utils.ReplyContentType
 
 @Composable
 fun ReplyHomeScreen(
     replyUiState: ReplyUiState,
+    contentType: ReplyContentType,
     onTabPressed: (MailboxType) -> Unit,
     onEmailCardPressed: (Email) -> Unit,
     onDetailScreenBackPressed: () -> Unit,
@@ -81,18 +83,29 @@ fun ReplyHomeScreen(
             text = stringResource(id = R.string.tab_spam)
         )
     )
-    ReplyAppContent(
-        replyUiState = replyUiState,
-        onTabPressed = onTabPressed,
-        onEmailCardPressed = onEmailCardPressed,
-        navigationItemContentList = navigationItemContentList,
-        modifier = modifier
-    )
+    if( replyUiState.isShowingHomepage) {
+        ReplyAppContent(
+            replyUiState = replyUiState,
+            onTabPressed = onTabPressed,
+            onEmailCardPressed = onEmailCardPressed,
+            navigationItemContentList = navigationItemContentList,
+            contentType = contentType,
+            modifier = modifier
+        )
+    }
+    else{
+        ReplyDetailsScreen(
+            replyUiState = replyUiState,
+            onBackPressed = onDetailScreenBackPressed,
+            modifier = modifier
+        )
+    }
 }
 
 @Composable
 private fun ReplyAppContent(
     replyUiState: ReplyUiState,
+    contentType: ReplyContentType,
     onTabPressed: ((MailboxType) -> Unit),
     onEmailCardPressed: (Email) -> Unit,
     navigationItemContentList: List<NavigationItemContent>,
@@ -115,7 +128,8 @@ private fun ReplyAppContent(
             ReplyListOnlyContent(
                 replyUiState = replyUiState,
                 onEmailCardPressed = onEmailCardPressed,
-                modifier = Modifier.weight(1f)
+                modifier = Modifier
+                    .weight(1f)
                     .padding(
                         horizontal = dimensionResource(R.dimen.email_list_only_horizontal_padding)
                     )
