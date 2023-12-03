@@ -125,7 +125,10 @@ fun SportsApp(
                 },
                 onBackPressed = onBackPressed,
                 contentPadding = innerPadding,
-                modifier = Modifier.fillMaxWidth()
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(top = 20.dp)
+
             )
         }
         else {
